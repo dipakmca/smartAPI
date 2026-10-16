@@ -22,3 +22,8 @@ CREATE TABLE `student_registration` (
   `status` int NOT NULL,
   PRIMARY KEY (`studentId`)
 ) ;
+
+
+
+
+/
