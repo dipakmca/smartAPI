@@ -1,0 +1,24 @@
+SHOW CREATE TABLE  student_registration;
+CREATE TABLE api_tokens (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    token_hash CHAR(64) NOT NULL UNIQUE,
+    expires_at DATETIME NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    last_used_at DATETIME NULL,
+    revoked_at DATETIME NULL,
+
+    INDEX idx_user_id (user_id),
+    INDEX idx_expires_at (expires_at),
+    INDEX idx_token_hash (token_hash)
+);
+
+CREATE TABLE `student_registration` (
+  `studentId` int NOT NULL AUTO_INCREMENT,
+  `studentName` varchar(90) NOT NULL DEFAULT '',
+  `emailId` varchar(50) NOT NULL DEFAULT '',
+  `password` varchar(10) NOT NULL DEFAULT '',
+  `mobileNo` varchar(12) NOT NULL DEFAULT '',
+  `status` int NOT NULL,
+  PRIMARY KEY (`studentId`)
+) ;
