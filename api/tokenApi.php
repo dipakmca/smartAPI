@@ -1,6 +1,6 @@
 
 <?php
-///Testing  in Dipak Branch
+///Testing  in Dipak Branch from laptop
 header("Content-Type: application/json; charset=utf-8");
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 require_once "../configuration/dbConnection.php";
