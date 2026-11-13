@@ -14,7 +14,7 @@ try {
     );
 
    // $conn->set_charset("utf8mb4");
-   echo "Database connected";
+  // echo "Database connected";
 
 } catch (mysqli_sql_exception $e) {
 

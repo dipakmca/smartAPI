@@ -169,13 +169,14 @@ try {
                  */
                 http_response_code(200);
 
+//echo $token;
                 echo json_encode([
                     "status" => true,
                     "message" => "Token created successfully.",
                     "data" => [
                         "id" => $tokenId,
                         "userId" => $userId,
-                        "token" => $token,
+                        "token" => $tokenHash,
                         "expiresAt" => $expiresAt
                     ]
                 ]);
